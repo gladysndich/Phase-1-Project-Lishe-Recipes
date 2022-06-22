@@ -1,0 +1,137 @@
+*{
+    padding:0;
+    margin:0;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  body{
+    background-color: rgba(0, 0, 184, 0.075);
+  }
+  
+  .centerItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sectHeader{
+    font-weight: 600;
+  }
+
+  #header{
+    background-color: white;
+  }
+  
+  #header .navbar{
+    min-height: 90px;
+  }
+  
+  #header .navbar-brand{
+    font-size: 35px;
+    font-weight: 500;
+    color: #212529;
+  }
+  
+  #header .navbar-brand span{
+    font-size: 35px;
+    font-weight: 800;
+    color: orange;
+  }
+  
+  #header .nav-link{
+    font-size: 20px;
+    font-weight: 500;
+    color: #212529;
+  }
+  
+  #header .nav-link:hover{
+    color: orangered;
+    border-bottom: 1.5px solid orange;
+  }
+  
+  #header .hdport{
+    height: 70vh;
+  }
+  
+  #header .hdport .left , .right{
+    height: 100%;
+  }
+  
+  #header .hdport .left{
+    font-size: 25px;
+  }
+  
+  #header .hdport .left h1{
+    font-size: 40px;
+    font-weight: 800;
+  }
+  
+  #header .hdport .right img{
+    height: 100%;
+  }
+  
+  #about{
+    margin-top: 10vh;
+    background-color: orange;
+    padding: 50px;
+    color: white;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #about .contentP{
+    font-size: 19px;
+    width: 80vw;
+  }
+  
+  #about p{
+    text-align: center;
+    padding: 30px;
+  }
+  
+  #recipes{
+    min-height: 70vh;
+    padding: 30px;
+  }
+  
+  #recipes .proCont{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    margin-bottom: 10px;
+  }
+  
+  #recipes .proCont img{
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    padding-bottom: 10px;
+  }
+  
+  #recipes .languages{
+    padding-top: 15px;
+  }
+  
+  #recipes .languages span{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    margin: 1px;
+    font-size: 13px;
+  }
+  
+  
+  
+  #recipes{
+    max-width: 70vh;
+  }
+  h2#bRecipes{
+    text-align: center;
+    }
