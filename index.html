@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lishe Recipes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://kit.fontawesome.com/2fee04cdef.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section id="header">
@@ -20,8 +21,21 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#recipes">Popular Recipes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#addIngredients">My Plate</a></li>
           </ul>
+          <div class="wrapper">
+            <div class = "searchRecipes">
+              <input type="search" placeholder="Search Recipes" name="search" class="data-search-input">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              
+              <div class ="auto-search-box">
+                <li>Kiwi Ice Cream</li>
+                <li>Nutty Cookies</li>
+                <li>Kachumber Salad</li>
+              
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </nav>
@@ -42,51 +56,23 @@
   <section id="recipes">
     <div class="recipes container">
       <h2 class="text-center fw-bold sectHeader m-3">Popular Recipes</h2>
-      <div class="row mt-5" id="poprecipes Container">
-        <!-- projects here -->
-        
-        <!-- <div class="col-4">
-          <div class="proCont">
-            <img src="https://exampleimage.png" alt="">
-            <h3>${item.title}</h3>
-            <a href="https://livesite.html">Live Site</a>
-            <a href="https://github/repo.git">Github Repo</a>
-            <div class="languages">
-              <span>Language 1</span>
-              <span>Language 2</span>
-              <span>Language 3</span>
-            </div>
+      <div class="recipe-cards" data-recipe-cards-container>
+        <template data-recipe-template>
+          <div class = "card">
+            <div class="image" data-image></div>
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
           </div>
-        </div> -->
-
+        </template>
       </div>
     </div>
   </section>
-
-  
-
-  <section id="addIngredients">
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="content">
-        <h2 class="text-center fw-bold sectHeader P-5">My Plate</h2>
-        <div class="contentP">
-          <p>
-            Add your ingredients to see what you can make.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <footer class="text-center text-white" style="background-color: orangered;">
-    <!-- Grid container -->
-    <div class="container p-4"></div>
-    <!-- Grid container -->
-
-    
+     
   </footer>
   
   <script src="script.js"></script>
+  <script src="suggestions.js"></script>
 </body>
 </html>

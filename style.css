@@ -71,67 +71,135 @@
   #header .hdport .right img{
     height: 100%;
   }
+
+  .searchRecipes input[type=search] {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
   
-  #about{
-    margin-top: 10vh;
-    background-color: orange;
-    padding: 50px;
+  .searchRecipes button{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #101113;
     color: white;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
   }
-  
-  #about .contentP{
-    font-size: 19px;
-    width: 80vw;
+
+  .searchRecipes button:hover{
+    background: orange;
   }
+
+  .searchRecipes::after{
+    content: "";
+    clear: both;
+  }
+
   
-  #about p{
+  
+  h2#recipes{
     text-align: center;
-    padding: 30px;
-  }
-  
+    }
+
   #recipes{
     min-height: 70vh;
     padding: 30px;
   }
   
-  #recipes .proCont{
+  .recipe-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+  }
+
+  .card{
     background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
-    margin-bottom: 10px;
+    --padding: 1rem;
+    border: 1px solid #777;
+    border-radius: .25rem;
+    overflow: hidden;
+  }
+
+  .card > .header{
+    font-size: 1.5rem;
+    padding: var(--padding);
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+  }
+
+  .card > .body{
+    font-size: .9rem;
+    padding: 0 var(--padding);
+  }
+
+  .hide{
+    display: none;
+  }
+
+  #addIngredients{
+    display: flex;
+    flex-direction: row;
+    background-color: lightsalmon;
+    align-items: center;
+    justify-content: center;
   }
   
-  #recipes .proCont img{
-    border-radius: 10px;
+  .card > .image {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .card > .image > img{
+    display: block;
     width: 100%;
-    height: 150px;
+    max-height: 200px;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    padding-bottom: 10px;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+  }
+
+  .card:hover > .image > img {
+    transform: scale(1.05);
   }
   
-  #recipes .languages{
-    padding-top: 15px;
+  .searchRecipes > .auto-search-box{
+    padding: 10px 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
   }
-  
-  #recipes .languages span{
-    background-color: orange;
-    padding: 5px;
-    border-radius: 5px;
-    color: white;
-    margin: 1px;
-    font-size: 13px;
+
+  .searchRecipes:active .auto-search-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
   }
-  
-  
-  
-  #recipes{
-    max-width: 70vh;
+
+  .auto-search-box li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
   }
-  h2#bRecipes{
-    text-align: center;
-    }
+
+  .searchRecipes:active .auto-search-box li{
+    display: block;
+  }
+
+  .auto-search-box li:hover{
+    background: #efefef;
+
+  }
